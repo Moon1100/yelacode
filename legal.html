@@ -8,6 +8,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-black text-white min-h-screen">
+  <div class="absolute top-6 right-6 flex gap-3 z-50">
+    <a href="index.html" class="px-4 py-2 rounded-md border border-white text-white bg-white/10 hover:bg-white/20 transition">Home</a>
+    <a href="contact.html" class="px-4 py-2 rounded-md border border-white text-white bg-white/10 hover:bg-white/20 transition">Contact Us</a>
+  </div>
   <div x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)" class="relative overflow-hidden bg-cover bg-no-repeat min-h-[40vh] flex items-center justify-center" style="background-image: url('./assets/bg.jpg');">
     <div class="absolute inset-0 bg-black/70"></div>
     <div class="relative z-10 max-w-2xl mx-auto text-center py-16 px-4">
