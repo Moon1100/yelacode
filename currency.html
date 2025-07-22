@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction Currency | YelaCode</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen">
+  <div x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)" class="relative overflow-hidden bg-cover bg-no-repeat min-h-[40vh] flex items-center justify-center" style="background-image: url('./assets/bg3.jpg');">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center py-16 px-4">
+      <h1 x-show="show" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" class="text-4xl font-bold mb-4">Transaction Currency</h1>
+      <p x-show="show" x-transition:enter="transition ease-out duration-1000 delay-200" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" class="text-lg text-gray-300">All transactions on YelaCode are processed in Malaysian Ringgit (MYR).</p>
+    </div>
+  </div>
+  <div class="max-w-2xl mx-auto py-12 px-4 space-y-6">
+    <div x-data="{ show: false }" x-init="setTimeout(() => show = true, 400)" x-show="show" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+      <p class="text-lg mb-4">YelaCode operates in Malaysia and, as such, all prices and transactions are denominated in Malaysian Ringgit (MYR). This ensures transparency and consistency for our local customers, allowing for straightforward billing and payment processing.</p>
+      <p class="text-lg mb-4">For international customers, your payment provider or bank may automatically convert the transaction amount to your local currency based on prevailing exchange rates. Please note that additional fees or charges may apply depending on your financial institution's policies.</p>
+      <p class="text-lg">If you have any questions about currency conversion or need a quote in another currency, please contact our customer service team. We are committed to making your experience as smooth and clear as possible.</p>
+    </div>
+  </div>
+  <footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0">
+        <a href="about.html" class="text-gray-400 hover:text-white text-sm underline transition">About/Services</a>
+        <a href="currency.html" class="text-gray-400 hover:text-white text-sm underline transition">Transaction Currency</a>
+        <a href="contact.html" class="text-gray-400 hover:text-white text-sm underline transition">Contact</a>
+        <a href="refund-delivery.html" class="text-gray-400 hover:text-white text-sm underline transition">Return/Refund & Delivery</a>
+        <a href="legal.html" class="text-gray-400 hover:text-white text-sm underline transition">Legal/Export Restrictions</a>
+        <a href="privacy.html" class="text-gray-400 hover:text-white text-sm underline transition">Privacy Policy</a>
+        <a href="terms.html" class="text-gray-400 hover:text-white text-sm underline transition">Terms & Conditions</a>
+        <a href="security.html" class="text-gray-400 hover:text-white text-sm underline transition">Security Policy</a>
+      </div>
+      <div class="mt-8 md:order-1 md:mt-0">
+        <p class="text-center text-xs leading-5 text-gray-500">&copy; 2025 TechSeek All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
