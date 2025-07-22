@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" x-data>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sample Projects | YelaCode</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen">
+
+  <!-- Navigation -->
+  <div class="absolute top-6 right-6 flex gap-3 z-50">
+    <a href="index.html" class="px-4 py-2 rounded-md border border-white bg-white/10 hover:bg-white/20 transition">Home</a>
+    <a href="contact.html" class="px-4 py-2 rounded-md border border-white bg-white/10 hover:bg-white/20 transition">Contact Us</a>
+  </div>
+
+  <!-- Hero Header -->
+  <div x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)" class="relative overflow-hidden bg-cover bg-no-repeat min-h-[40vh] flex items-center justify-center" style="background-image: url('./assets/bg3.jpg');">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center py-16 px-4">
+      <h1 x-show="show" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" class="text-4xl font-bold mb-4">
+        Sample Projects
+      </h1>
+      <p x-show="show" x-transition:enter="transition ease-out duration-1000 delay-200" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" class="text-lg text-gray-300">
+        Explore some of our featured work and interactive demos.
+      </p>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="max-w-6xl mx-auto py-16 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project Card -->
+      <div x-data x-init="setTimeout(() => $el.classList.remove('opacity-0', 'scale-90'), 300)" class="bg-gray-900/80 rounded-2xl shadow-lg overflow-hidden flex flex-col transition ease-out duration-1000 opacity-0 scale-90">
+        <div class="relative h-64 bg-black flex items-center justify-center">
+          <iframe src="sample/kleverkek.html" class="w-full h-full border-0" loading="lazy" title="KleverKek Demo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"></iframe>
+          <img src="sample_asset/kek1.jpeg" alt="KleverKek Preview" class="absolute inset-0 w-full h-full object-cover" style="display:none;" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h2 class="text-2xl font-semibold mb-2">KleverKek</h2>
+          <p class="text-gray-300 mb-4 flex-1">
+            A modern, responsive landing page for a cake shop, featuring product cards, a promo section, and a beautiful hero area. Built with Tailwind CSS.
+          </p>
+          <a href="sample/kleverkek.html" target="_blank" class="mt-auto inline-block px-4 py-2 rounded-md border border-indigo-400 text-indigo-200 bg-indigo-500/10 hover:bg-indigo-500/20 transition">
+            Explore
+          </a>
+        </div>
+      </div>
+
+
+      <div x-data x-init="setTimeout(() => $el.classList.remove('opacity-0', 'scale-90'), 300)" class="bg-gray-900/80 rounded-2xl shadow-lg overflow-hidden flex flex-col transition ease-out duration-1000 opacity-0 scale-90">
+        <div class="relative h-64 bg-black flex items-center justify-center">
+          <iframe src="https://robotedge.onrender.com" class="w-full h-full border-0" loading="lazy" title="RobotEdge Demo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"></iframe>
+          <img src="sample_asset/kek1.jpeg" alt="RobotEdge Preview" class="absolute inset-0 w-full h-full object-cover" style="display:none;" />
+        </div>
+        <div class="p-6 flex-1 flex flex-col">
+          <h2 class="text-2xl font-semibold mb-2">RobotEdge</h2>
+          <p class="text-gray-300 mb-4 flex-1">
+            A modern, responsive landing page for a robotics club,  Built with Tailwind CSS.
+          </p>
+          <a href="https://robotedge.onrender.com" target="_blank" class="mt-auto inline-block px-4 py-2 rounded-md border border-indigo-400 text-indigo-200 bg-indigo-500/10 hover:bg-indigo-500/20 transition">
+            Explore
+          </a>
+        </div>
+      </div>
+
+      <div x-data x-init="setTimeout(() => $el.classList.remove('opacity-0', 'scale-90'), 500)" class="bg-gray-900/80 rounded-2xl shadow-lg overflow-hidden flex flex-col transition ease-out duration-1000 opacity-0 scale-90">
+  <div class="relative h-64 bg-black flex items-center justify-center">
+    <iframe src="https://design-unikomi.onrender.com" class="w-full h-full border-0" loading="lazy" title="Design Unikomi Demo"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"></iframe>
+    <img src="sample_asset/design_placeholder.jpeg" alt="Design Unikomi Preview" class="absolute inset-0 w-full h-full object-cover" style="display:none;" />
+  </div>
+  <div class="p-6 flex-1 flex flex-col">
+    <h2 class="text-2xl font-semibold mb-2">Design Unikomi</h2>
+    <p class="text-gray-300 mb-4 flex-1">
+      A sleek and minimal web design portfolio, showcasing visual creativity and smooth interactions. Built with Tailwind CSS.
+    </p>
+    <a href="https://design-unikomi.onrender.com" target="_blank" class="mt-auto inline-block px-4 py-2 rounded-md border border-indigo-400 text-indigo-200 bg-indigo-500/10 hover:bg-indigo-500/20 transition">
+      Explore
+    </a>
+  </div>
+</div>
+
+
+
+
+
+      <!-- Add more project cards here -->
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0">
+        <a href="about.html" class="text-gray-400 hover:text-white text-sm underline transition">About/Services</a>
+        <a href="currency.html" class="text-gray-400 hover:text-white text-sm underline transition">Transaction Currency</a>
+        <a href="contact.html" class="text-gray-400 hover:text-white text-sm underline transition">Contact</a>
+        <a href="refund-delivery.html" class="text-gray-400 hover:text-white text-sm underline transition">Return/Refund & Delivery</a>
+        <a href="legal.html" class="text-gray-400 hover:text-white text-sm underline transition">Legal/Export Restrictions</a>
+        <a href="privacy.html" class="text-gray-400 hover:text-white text-sm underline transition">Privacy Policy</a>
+        <a href="terms.html" class="text-gray-400 hover:text-white text-sm underline transition">Terms & Conditions</a>
+        <a href="security.html" class="text-gray-400 hover:text-white text-sm underline transition">Security Policy</a>
+      </div>
+      <div class="mt-8 md:order-1 md:mt-0">
+        <p class="text-center text-xs leading-5 text-gray-500">&copy; 2025 YelaCode. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
